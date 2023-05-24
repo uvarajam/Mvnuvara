@@ -1,5 +1,6 @@
 pipeline {
      agent any
+     stages{
     stage ('Depoly'){
         steps{
     sshagent (credentials: ['sshkey']) {
@@ -8,4 +9,5 @@ pipeline {
    }
     }
     }
+}
 
